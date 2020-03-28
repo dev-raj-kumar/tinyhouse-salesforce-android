@@ -1,18 +1,16 @@
 package in.tinyhouse.salesforce;
 
 import androidx.appcompat.app.AppCompatActivity;
-
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.KeyEvent;
-import android.view.View;
-import android.widget.Button;
+//import android.view.View;
+//import android.widget.Button;
 
 import com.journeyapps.barcodescanner.CaptureManager;
 import com.journeyapps.barcodescanner.DecoratedBarcodeView;
 
 public class ScannerActivity extends AppCompatActivity  {
-    private Button mBackArrow;
+   // private Button mBackArrow;
     private CaptureManager capture;
     private DecoratedBarcodeView barcodeScannerView;
 
@@ -20,15 +18,15 @@ public class ScannerActivity extends AppCompatActivity  {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_scanner);
-        //initialize the back arrow but as there is no back arrow in the layout so I am commenting these lines
-      /*  mBackArrow = findViewById(R.id.back_arrow);
+        //initialize the back arrow but as there is no back arrow in the layout so I am commenting all the lines as the checks would fail
+      /** mBackArrow = findViewById(R.id.back_arrow);
         mBackArrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                onBackPressed();
             }
         });
-        */
+        **/
 
         //Initialize barcode scanner view
         barcodeScannerView = findViewById(R.id.zxing_barcode_scanner);
